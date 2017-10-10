@@ -110,7 +110,6 @@ hr {
 #quote {
     text-align: center;
     font-family: 'Great Vibes', cursive;
-    font-size: 3.0vw
 }
 
 /*Jumbotron quote fits on 1 line*/
@@ -118,7 +117,7 @@ hr {
     #quote { font-size: 30px; }
 }
 @media all and (max-width: 959px) {
-    #quote { font-size: 3vw; }
+    #quote { font-size: 4.5vw; }
 }
 
 /* Banner config*/

@@ -72,47 +72,57 @@ namespace WeddingAzure.Factories
                 imageSrc: imageService.GetImageUri("img", "ali.jpg"),
                 name: "Ali Black",
                 role: "Maid of Honour",
-                description: @"Ali is a pigeon. She loves good wine, good conversation, and is always up for an adventure or holiday abroad.",
+                description: @"Ali - aka Baz - is a pigeon.
+                Ali met Lizi on the first day of school when they sat next to each other in class.
+                Since then they’ve been inseparable, even when they’re oceans apart.
+                Ali loves good wine, getting pampered and relaxing in the sun! ",
                 weddingParty: WeddingParty.Lizi);
 
             var hails = new WeddingPartyMember(
                 imageSrc: imageService.GetImageUri("img", "hails.jpg"),
                 name: "Hayley Richardson",
                 role: "Maid of Honour",
-                description: @"Hayley aka 'hails' is a Pigeon. She enjoys running, 
-                interior design, and meeting new dogs.",
+                description: @"Hayley - aka ‘Hails’ - is a pigeon.
+                Hails and Lizi lived together for many years and Hails taught Lizi many invaluable life skills
+                including how to poach an egg. She enjoys running, a good gin & tonic and meeting new dogs.",
                 weddingParty: WeddingParty.Lizi);
 
             var loz = new WeddingPartyMember(
                 imageSrc: imageService.GetImageUri("img", "loz.jpg"),
                 name: "Laura Jenkinson",
                 role: "Bridesmaid",
-                description: @"Laura aka 'Loz' is a pigeon. She enjoys make-up art, social media, 
-                and pretending she's not famous.",
+                description: @"Laura - aka Lozzie - is a pigeon.
+                Lozzie and Lizi met at school and they thought they were just like Cheryl Cole and Sarah Harding.
+                Together they sing a great rendition “Hero” by of Enrique Iglesias and share a true love
+                for Game of Thrones. Lozzie enjoys make-up, otters, and pretending she’s not famous. ",
                 weddingParty: WeddingParty.Lizi);
 
             var hayley = new WeddingPartyMember(
                 imageSrc: imageService.GetImageUri("img", "hayley.jpg"),
                 name: "Hayley Rakitzis",
                 role: "Bridesmaid",
-                description: @"Hayley aka 'little 'un' is a pigeon. She enjoys meeting small dogs, 
-                shabby chic furniture, and nesting.",
+                description: @"Hayley - aka Hay - is a pigeon.
+                Hay met Lizi at boarding school where they shared a room together and realised: “This. Is. It.”
+                She loves decorating, shabby chic furniture and nesting.",
                 weddingParty: WeddingParty.Lizi);
 
             var fi = new WeddingPartyMember(
                 imageSrc: imageService.GetImageUri("img", "fi.jpg"),
                 name: "Fiona Dickinson-Hamer",
                 role: "Bridesmaid",
-                description: @"Fi is a pigeon. She enjoys telling Ally off, organising things,
-                and attending things she has organised.",
+                description: @"Fiona - aka Fi - is a pigeon.
+                Fi was Lizi’s first ever friend at The Royal School (they read Mizz magazine together).
+                She enjoys telling her husband (Ally) off, organising things and attending things she has organised.",
                 weddingParty: WeddingParty.Lizi);
 
             var dan = new WeddingPartyMember(
                 imageSrc: imageService.GetImageUri("img", "dan.jpg"),
                 name: "Daniel Jeffery",
                 role: "Master of Ceremonies",
-                description: @"Dan is Lizi's older brother, and our MC. Dan enjoys cricket,
-                playing the piano, and swearing profusely.",
+                description: @"Dan is Lizi’s older brother, and the emcee.
+                They met when Lizi was born.
+                Dan enjoys cricket, playing the piano and swearing profusely (you have been warned!)
+",
                 weddingParty: WeddingParty.Lizi);
 
             var weddingParty = new List<WeddingPartyMember>
