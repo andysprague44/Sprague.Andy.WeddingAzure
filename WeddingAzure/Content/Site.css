@@ -1,0 +1,134 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #cccccc;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    font-weight: bold; 
+}
+h3, h4 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*Customise navbar*/
+.navbar {
+    background-color: grey;
+    border: none;
+    border-bottom: #ffff00;
+    font-family: 'Amatic SC', cursive;
+}
+
+.navbar-inner {
+    min-height: 0;
+}
+
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 50px;
+    height: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 30px;
+}
+
+/*Center nav-bar text*/
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+/*Hover navbar text colour*/
+.navbar-fixed-top .navbar-nav > li > a:hover,
+.navbar-fixed-top .navbar-nav > li > a:focus
+{
+    color: #FFFF00;
+}
+
+/* Round images */
+.img-circle {
+    border-radius: 50%;
+    max-width:95%;
+    max-height:95%;
+}
+
+.p-justify {
+    text-align: justify
+}
+
+/* Line seperators */
+hr {
+    border-top: 1px solid #FFFF00;
+    width: 30vw;
+}
+
+/* Jumbotron background image*/
+.jumbotron {
+    margin-bottom: 0;
+    background-image: url("https://landowedding.blob.core.windows.net/public-img/italy-like-a-bird.jpg");
+    background-position: 0 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    height: 65vh;
+    opacity: 0.6;
+}
+
+/*Jubotron quote settings */
+#quote {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.0vw
+}
+
+/*Jumbotron quote fits on 1 line*/
+@media all and (min-width: 960px) {
+    #quote { font-size: 30px; }
+}
+@media all and (max-width: 959px) {
+    #quote { font-size: 3vw; }
+}
+
+/* Banner config*/
+#banner {
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+
+/* Home Page Details */
+#weddingNote, #receptionNote, #popNote {
+    font-style: italic;
+    font-size: 120%;
+}

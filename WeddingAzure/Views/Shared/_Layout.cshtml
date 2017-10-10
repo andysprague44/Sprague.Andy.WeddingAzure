@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-brand">
+        <img src="https://landowedding.blob.core.windows.net/public-img/wedding-love-bird-icon.png" width="50" height="50" alt="">
+    </div>
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="@Url.Action("Index", "Home")">
+                    Our Wedding
+                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Details", "Home")">
+                    Details
+                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Contact", "Home")">
+                    RSVP
+                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>Use our hashtag! #Lando2018</p>
+            <p>&copy; @DateTime.Now.Year - Lando productions</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

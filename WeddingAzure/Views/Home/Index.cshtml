@@ -1,0 +1,111 @@
+﻿@using WeddingAzure.Models
+@model IEnumerable<WeddingAzure.Models.WeddingPartyMember>
+
+@{
+    ViewBag.Title = "#Lando2018 - Home";
+}
+
+<div class="jumbotron" id="jumbo">
+    <p id="quote">Every love story is beautiful, but ours is my favourite</p>
+</div>
+
+<div class="row">
+    <div class="col-xs-12" id="banner">
+        <h2>Andy and Lizi</h2>
+        <p>May 26, 2018
+            <span class="glyphicon glyphicon-heart"></span>
+            Denbies Wine Estate, Surrey 
+            <span class="glyphicon glyphicon-heart"></span>
+            @ViewBag.DaysToGo days to go!
+        </p>
+    </div>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-xs-12"><h2>The Wedding </h2></div>
+    <div class="col-xs-12"><p>Denbies Wine Estate, Dorking, RH5 6AA, UK</p></div>
+    <div class="col-xs-12"><p>2:00pm for 2:30pm </p></div>
+    <div class="col-xs-12"><p>Attire: Smart</p></div>
+    <div class="col-xs-12" id="weddingNote"><p>Please respect our wishes for a child free ceremony and reception.</p></div>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-xs-12"><h2>The Reception </h2></div>
+    <div class="col-xs-12"><p>Denbies Wine Estate, Dorking, RH5 6AA, UK</p></div>
+    <div class="col-xs-12" id="receptionNote"><p>Come for the wedding, stay for the wine!</p></div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-xs-12"><h2>Pop in the Park </h2></div>
+    <div class="col-xs-12"><p>Sunday, May 27, 2018K</p></div>
+    <div class="col-xs-12"><p>Phillips Memorial Park, Godalming, GU7 1EP, UK</p></div>
+    <div class="col-xs-12"><p>From 2:00pm</p></div>
+    <div class="col-xs-12" id="popNote"><p>Please bring your kids and join the families for music and a picnic between 2pm and 6pm.</p></div>
+</div>
+<hr />
+<div class="row">
+    <span class="glyphicon glyphicon-heart"></span>
+</div>
+<hr />
+<div class="row" id="ourStory">
+    <div class="col-xs-12" ><h2>Our Story</h2></div>
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8">
+        <p class="p-justify">Andy and Lizi met at an awkward dinner party where Lizi burnt the spaghetti. 
+            Then on their first date they tried to convince the other they were 'cultural' when they arranged
+            to meet at the V&A, only to find it was shut. It only took Andy three weeks to ask Lizi whether she would 
+            'officially' be his girlfriend, but it took another three years for Andy to finally build up the courage
+            to ask the big question...
+        </p>
+        <p>'Will you emigrate to America with me?' She said yes, and the rest is history!</p>
+    </div>
+    <div class="col-xs-2"></div>
+</div>
+<hr />
+<div class="row">
+    <span class="glyphicon glyphicon-heart"></span>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-xs-12"><h2>Wedding Party</h2></div>
+    <div class="col-xs-12 col-md-6" id="andyWeddingParty">
+        @foreach (var item in Model.Where(modelItem => modelItem.WeddingParty == WeddingParty.Andy))
+        {
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="col-xs-4">
+                        <img class="img-circle" 
+                             src="@Html.DisplayFor(modelItem => item.ImageSrc)" 
+                             alt="@Html.DisplayFor(modelItem => item.Name)"/>
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>@Html.DisplayFor(modelItem => item.Name) - @Html.DisplayFor(modelItem => item.Role)</h3>
+                        <p class="p-justify">@Html.DisplayFor(modelItem => item.Description)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-xs-12 col-md-6" id="liziWeddingParty">
+        @foreach (var item in Model.Where(modelItem => modelItem.WeddingParty == WeddingParty.Lizi))
+        {
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="col-xs-4">
+                        <img class="img-circle"
+                             src="@Html.DisplayFor(modelItem => item.ImageSrc)"
+                             alt="@Html.DisplayFor(modelItem => item.Name)" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>@Html.DisplayFor(modelItem => item.Name) - @Html.DisplayFor(modelItem => item.Role)</h3>
+                        <p class="p-justify">
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
