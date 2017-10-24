@@ -11,7 +11,7 @@ namespace WeddingAzure.Controllers
 {
     public class HomeController : Controller
     {
-        private static IImageService _imageService = new AzureBlobStoreImageService(
+        private static readonly IImageService _imageService = new AzureBlobStoreImageService(
             "landowedding",
             "8j7qKtXTrFUFK3xjrZ3GBRxqvIay+/8divHV6Mmy5rwis16+f5ACG9FDFbqcxVnB7l1vrM5EzAvB8IgautEI8g=="
         );
@@ -27,9 +27,11 @@ namespace WeddingAzure.Controllers
 
         public ActionResult Details()
         {
+            var accommodations = AccommodationFactory.GetAccommodations();
+
             ViewBag.Message = "Your application details page.";
 
-            return View();
+            return View(accommodations);
         }
 
         public ActionResult Contact()
