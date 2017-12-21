@@ -1,11 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingAzure", "WeddingAzure\WeddingAzure.csproj", "{7D51759B-7E3A-4F66-BE8C-D053F34DCDD6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingAzure.Tests", "WeddingAzure.Tests\WeddingAzure.Tests.csproj", "{0F21C647-6459-481E-9296-3A2FBA16D417}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sprague.Andy.WeddingAzure.DataAccess", "Sprague.Andy.WeddingAzure.DataAccess\Sprague.Andy.WeddingAzure.DataAccess.csproj", "{99D9830A-3A7D-4FBA-A8D8-D4DBDD5C2CE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sprague.Andy.WeddingAzure.Models", "Sprague.Andy.WeddingAzure.Models\Sprague.Andy.WeddingAzure.Models.csproj", "{BD78EDE8-C8DE-4602-96AF-D2B225DA473B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CA0802C2-1CEC-4784-B523-786111961D83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sprague.Andy.WeddingAzure.DataAccess.Tests", "Sprague.Andy.WeddingAzure.DataAccess.Tests\Sprague.Andy.WeddingAzure.DataAccess.Tests.csproj", "{568B4CC7-ADBF-4D68-B799-F8143EA7D840}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +29,25 @@ Global
 		{0F21C647-6459-481E-9296-3A2FBA16D417}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F21C647-6459-481E-9296-3A2FBA16D417}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F21C647-6459-481E-9296-3A2FBA16D417}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99D9830A-3A7D-4FBA-A8D8-D4DBDD5C2CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99D9830A-3A7D-4FBA-A8D8-D4DBDD5C2CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99D9830A-3A7D-4FBA-A8D8-D4DBDD5C2CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99D9830A-3A7D-4FBA-A8D8-D4DBDD5C2CE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD78EDE8-C8DE-4602-96AF-D2B225DA473B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD78EDE8-C8DE-4602-96AF-D2B225DA473B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD78EDE8-C8DE-4602-96AF-D2B225DA473B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD78EDE8-C8DE-4602-96AF-D2B225DA473B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{568B4CC7-ADBF-4D68-B799-F8143EA7D840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{568B4CC7-ADBF-4D68-B799-F8143EA7D840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{568B4CC7-ADBF-4D68-B799-F8143EA7D840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{568B4CC7-ADBF-4D68-B799-F8143EA7D840}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0F21C647-6459-481E-9296-3A2FBA16D417} = {CA0802C2-1CEC-4784-B523-786111961D83}
+		{568B4CC7-ADBF-4D68-B799-F8143EA7D840} = {CA0802C2-1CEC-4784-B523-786111961D83}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {70760D02-F58F-491C-9F6A-E52A2FF24AA9}
