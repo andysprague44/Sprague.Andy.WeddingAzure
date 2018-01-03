@@ -1,0 +1,57 @@
+﻿@using WeddingAzure.Models
+@model WeddingAzure.Models.RsvpFormData
+@{
+    ViewBag.Title = "#Lando2018 - RSVP";
+}
+
+<div class="row">
+    <div class="col-xs-12"><h2>RSVP</h2></div>
+</div>
+<hr />
+<div class="row">
+    <span class="glyphicon glyphicon-heart"></span>
+</div>
+<hr />
+<div class="row">
+    <div class="col-xs-1 col-md-2"></div>
+    <div class="col-xs-10 col-md-8">
+    @using (Html.BeginForm("Index", "Rsvp", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.NameTextBoxData, new { @class = "col-md-4 control-label" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(m => m.NameTextBoxData, new { @class = "form-control", placeholder = "Your name" })
+                @Html.ValidationMessageFor(m => m.NameTextBoxData, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.AttendingWeddingCheckBox, new { @class = "col-md-4 control-label" })
+            <div class="col-md-8">
+                @Html.CheckBoxFor(m => m.AttendingWeddingCheckBox, new { @class = "form-control" })
+            </div>
+            @Html.LabelFor(m => m.AttendingSundayCheckBox, new { @class = "col-md-4 control-label" })
+            <div class="col-md-8">
+                @Html.CheckBoxFor(m => m.AttendingSundayCheckBox, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.DietaryRequirementsTextBoxData, new { @class = "col-md-4 control-label" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(m => m.DietaryRequirementsTextBoxData, new { @class = "form-control", placeholder = "e.g. Vegan, No Peanuts..." })
+                @Html.ValidationMessageFor(m => m.DietaryRequirementsTextBoxData, null, new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(m => m.SongRequestTextBoxData, new { @class = "col-md-4 control-label" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(m => m.SongRequestTextBoxData, new { @class = "form-control", placeholder = "Title, Artist" })
+                @Html.ValidationMessageFor(m => m.SongRequestTextBoxData, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <input type="submit" value="Submit" />
+    }
+    </div>
+    <div class="col-xs-1 col-md-2"></div>
+</div>
+<hr />
+<div class="row">
+    <span class="glyphicon glyphicon-heart"></span>
+</div>

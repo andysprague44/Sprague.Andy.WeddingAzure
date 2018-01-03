@@ -34,12 +34,7 @@ namespace WeddingAzure.Controllers
             return View(accommodations);
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
 
         
     }

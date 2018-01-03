@@ -91,7 +91,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sprague.Andy.WeddingAzure.DAL\Sprague.Andy.WeddingAzure.DataAccess.csproj">
+    <ProjectReference Include="..\Sprague.Andy.WeddingAzure.DataAccess\Sprague.Andy.WeddingAzure.DataAccess.csproj">
       <Project>{99d9830a-3a7d-4fba-a8d8-d4dbdd5c2ce4}</Project>
       <Name>Sprague.Andy.WeddingAzure.DataAccess</Name>
     </ProjectReference>

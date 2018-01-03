@@ -12,19 +12,22 @@ namespace WeddingAzure.Models
         public string Phone  { get; set; }
         public string Description { get; set; }
         public string Link { get; set; }
-
+        public bool IsMainChoice { get; set; }
+        
         public Accommodation(
             string name,
             string address,
             string phone,
             string description,
-            string link)
+            string link,
+            bool isMainChoice)
         {
             Name = name;
             Address = address;
             Phone = phone;
             Description = description;
             Link = link;
+            IsMainChoice = isMainChoice;
         }
     }
 }
