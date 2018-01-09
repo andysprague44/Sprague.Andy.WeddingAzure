@@ -23,7 +23,7 @@ namespace WeddingAzure.Models
         [Display(Name = "Dietary Requirements")]
         public string DietaryRequirementsTextBoxData { get; set; }
         
-        [Display(Name = "Song Request", Prompt = "Title, Artist")]
+        [Display(Name = "If you play this then I'll dance... ", Prompt = "Title, Artist")]
         public string SongRequestTextBoxData { get; set; }
     }
 }

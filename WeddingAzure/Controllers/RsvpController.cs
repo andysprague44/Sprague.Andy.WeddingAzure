@@ -25,9 +25,9 @@ namespace WeddingAzure.Controllers
         [HttpPost]
         public async Task<ActionResult> Index(Models.RsvpFormData formData)
         {
-            if (formData.SongRequestTextBoxData != null && formData.SongRequestTextBoxData.ToLower().Contains("spice girls"))
+            if (formData.SongRequestTextBoxData != null && formData.SongRequestTextBoxData.ToLower().Contains("spice girl"))
             {
-                ModelState.AddModelError("SongRequestTextBoxData", "Who are you?  Spice Girls is not allowed");    
+                ModelState.AddModelError("SongRequestTextBoxData", "Spice Girls? Seriously?");    
             }
 
             if (ModelState.IsValid)
@@ -36,7 +36,10 @@ namespace WeddingAzure.Controllers
 
                 var rsvpEntity = new RsvpEntity(formData.NameTextBoxData)
                 {
-                    AttendingWedding = formData.AttendingWeddingCheckBox
+                    AttendingWedding = formData.AttendingWeddingCheckBox,
+                    AttendingPopInThePark = formData.AttendingSundayCheckBox,
+                    DietaryRequirements = formData.DietaryRequirementsTextBoxData,
+                    SongRequest = formData.SongRequestTextBoxData
                 };
 
                 await repo.AddOrReplaceRsvpAsync(rsvpEntity);

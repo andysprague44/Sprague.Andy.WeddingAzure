@@ -89,26 +89,7 @@ namespace Sprague.Andy.WeddingAzure.DataAccess.Tests.Rsvp
             }
         }
 
-        [Test]
-        public async Task Test_CanUpdateRsvpAsync()
-        {
-            var rsvp = new RsvpEntity("theGroom");
-            try
-            {
-                await _rsvpService.AddRsvpAsync(rsvp);
-                
-                rsvp.AttendingWedding = true;
-                await _rsvpService.UpdateRsvpAsync(rsvp);
-
-                var rsvpFromStorage = await _rsvpService.GetRsvpAsync("theGroom");
-                Assert.IsNotNull(rsvpFromStorage);
-                Assert.IsTrue(rsvpFromStorage.AttendingWedding);
-            }
-            finally
-            {
-                await _rsvpService.DeleteRsvpAsync(rsvp);
-            }
-        }
+        
 
         [Test]
         public void Test_GetRsvpAsync_NoEntryThrowsException()
@@ -116,15 +97,6 @@ namespace Sprague.Andy.WeddingAzure.DataAccess.Tests.Rsvp
             var rsvp = new RsvpEntity("theGroom");
             Assert.ThrowsAsync<ArgumentException>(async () =>
                 await _rsvpService.GetRsvpAsync(rsvp.Name)
-            );
-        }
-
-        [Test]
-        public void Test_UpdateRsvpAsync_NoEntryThrowsException()
-        {
-            var rsvp = new RsvpEntity("theGroom");
-            Assert.ThrowsAsync<ArgumentException>(async () =>
-                await _rsvpService.UpdateRsvpAsync(rsvp)
             );
         }
 

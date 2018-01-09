@@ -40,25 +40,6 @@ namespace Sprague.Andy.WeddingAzure.DataAccess.Rsvp
             _log.Information($"Added or replaced rsvp for {rsvp.Name}");
         }
 
-        public async Task UpdateRsvpAsync(RsvpEntity rsvp)
-        {
-            var retrieveOperation = TableOperation.Retrieve<RsvpEntity>(rsvp.PartitionKey, rsvp.RowKey);
-            var retrievedResult = await _rvspTable.ExecuteAsync(retrieveOperation);
-            var updateEntity = (RsvpEntity)retrievedResult.Result;
-
-            if (updateEntity == null)
-            {
-                throw new ArgumentException($"Could not update '{rsvp.Name}' as no record exists");
-            }
-
-            updateEntity.UpdateRsvp(rsvp.AttendingWedding);
-
-            var updateOperation = TableOperation.Replace(updateEntity);
-            await _rvspTable.ExecuteAsync(updateOperation);
-
-            _log.Information($"Updated rsvp for {rsvp.Name}");
-        }
-
         public async Task DeleteRsvpAsync(RsvpEntity rsvp)
         {
             var retrieveOperation = TableOperation.Retrieve<RsvpEntity>(rsvp.PartitionKey, rsvp.RowKey);

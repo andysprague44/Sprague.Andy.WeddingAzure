@@ -7,7 +7,6 @@ namespace Sprague.Andy.WeddingAzure.DataAccess.Rsvp
     {
         Task AddRsvpAsync(RsvpEntity rsvp);
         Task AddOrReplaceRsvpAsync(RsvpEntity rsvp);
-        Task UpdateRsvpAsync(RsvpEntity rsvp);
         Task DeleteRsvpAsync(RsvpEntity rsvp);
         Task<RsvpEntity> GetRsvpAsync(string name);
     }
