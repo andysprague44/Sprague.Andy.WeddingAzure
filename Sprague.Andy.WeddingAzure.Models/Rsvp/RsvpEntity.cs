@@ -21,12 +21,9 @@ namespace Sprague.Andy.WeddingAzure.Models.Rsvp
         public string Name { get; set; }
 
         public bool AttendingWedding { get; set; }
+        public bool AttendingPopInThePark { get; set; }
+        public string DietaryRequirements { get; set; }
+        public string SongRequest { get; set; }
 
-        public RsvpEntity UpdateRsvp(bool attendingWedding)
-        {
-            AttendingWedding = attendingWedding;
-
-            return this;
-        }
     }
 }
