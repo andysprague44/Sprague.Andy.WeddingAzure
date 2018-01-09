@@ -41,14 +41,14 @@ namespace WeddingAzure.Controllers
 
                 await repo.AddOrReplaceRsvpAsync(rsvpEntity);
 
-                return RedirectToAction("Success");
+                return View("Success", formData);
             }
             return View(formData);
         }
 
-        public ActionResult Success()
+        public ActionResult Success(Models.RsvpFormData formData)
         {
-            return View();
+            return View(formData);
         }
 
         protected override void OnException(ExceptionContext filterContext)
