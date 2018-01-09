@@ -1,8 +1,14 @@
-﻿@using WeddingAzure.Models
+﻿@using Microsoft.Ajax.Utilities
+@using WeddingAzure.Models
 @model WeddingAzure.Models.RsvpFormData
 
 @{
     ViewBag.Title = "#Lando2018 - RSVP";
+
+    ViewBag.AttendingWeddingText = @Model.AttendingWeddingCheckBox ? "will" : "will not";
+    ViewBag.AttendingSundayText = @Model.AttendingSundayCheckBox ? "will" : "will not";
+    ViewBag.DietaryRequirementsText = @Model.DietaryRequirementsTextBoxData ?? "N/A";
+    ViewBag.SongRequestText = @Model.SongRequestTextBoxData ?? "anything";
 }
 
 <div class="row">
@@ -14,17 +20,43 @@
 </div>
 <hr />
 <div class="row">
-        @if (Model.AttendingWeddingCheckBox)
+    <div class="col-xs-12">
+        @if (Model?.NameTextBoxData == null)
         {
-            <p class="p-description p-justify">Response submitted! See you at the wedding @Html.DisplayText(Model.NameTextBoxData)! </p>
+            <p class="p-description p-justify">Woops, something went wrong! Please re-submit the RSVP </p>
         }
         else
         {
-            <p class="p-description p-justify">Response submitted! It's a shame to hear you can't make it @Html.DisplayText(Model.NameTextBoxData). If you change your mind re - submit the form.</p>
-        }
+            if (Model.AttendingWeddingCheckBox)
+            {
+                <p class="p-description p-justify">Response submitted! See you at the wedding @Html.DisplayFor(m => m.NameTextBoxData)! </p>
 
-    }
+            }
+            else
+            {
+                <p class="p-description p-justify">Response submitted! It's a shame to hear you can't make it @Html.DisplayFor(m => m.NameTextBoxData).</p>
+            }
+            <p class="p-description p-justify"></p>
+            <p class="p-description p-justify">You answered that:</p>
+            <ul>
+                <li class="p-description p-justify">you <i>@ViewBag.AttendingWeddingText</i> be attending the Wedding</li>
+                <li class="p-description p-justify">you <i>@ViewBag.AttendingSundayText</i> be attending Pop in the Park</li>
+                <li class="p-description p-justify">your dietary requirements are <i>@ViewBag.DietaryRequirementsText</i></li>
+                <li class="p-description p-justify">you will dance if <i>@ViewBag.SongRequestText</i> is played</li>
+            </ul>
+            <p class="p-description p-justify">   If these details are incorrect just re-submit the RSVP</p>
+        }
+    </div>
 </div>
 
 <hr />
-<iframe src="https://giphy.com/embed/GStLeae4F7VIs" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/movie-silent-applausegifs-GStLeae4F7VIs"></a></p>
+@if (Model?.NameTextBoxData != null)
+{
+    if (Model.AttendingWeddingCheckBox)
+    {
+        <iframe src="https://giphy.com/embed/GStLeae4F7VIs" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    }
+    else { 
+    <iframe src="https://giphy.com/embed/Qw4X3FOWnLI44Hj29pe" width="480" height="272" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    }
+}
