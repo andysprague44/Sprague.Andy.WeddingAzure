@@ -1,7 +1,7 @@
 ﻿@using System.Linq
 @using System.Web.DynamicData
 @using WeddingAzure.Models
-@model System.Collections.Generic.IEnumerable < WeddingAzure.Models.Accommodation>
+@model System.Collections.Generic.IEnumerable<WeddingAzure.Models.Accommodation>
 
 @{
     ViewBag.Title = "#Lando2018 - Details";
@@ -12,7 +12,7 @@
     @foreach (var item in Model.Where(m => m.IsMainChoice))
     {
         <div class="row">
-            <div class="col-xs-12"><h2>@Html.DisplayFor(modelItem => item.Name) </h2></div>
+            <div class="col-xs-12"><h3>@Html.DisplayFor(modelItem => item.Name) </h3></div>
             <div class="col-xs-12"><p>@Html.DisplayFor(modelItem => item.Address)</p></div>
             <div class="col-xs-12"><p class="p-justify p-description">@Html.DisplayFor(modelItem => item.Description) </p></div>
             <div class="col-xs-12"><a href="@Html.DisplayFor(modelItem => item.Link)"> @Html.DisplayFor(modelItem => item.Name) Website </a></div>
@@ -22,13 +22,21 @@
     <div class="col-xs-12"><h2>Other Options</h2></div>
     @foreach (var item in Model.Where(m => !m.IsMainChoice))
     {
-            <div class="col-xs-12 col-md-6">
-                <div><h2>@Html.DisplayFor(modelItem => item.Name) </h2></div>
-                <div><p>@Html.DisplayFor(modelItem => item.Address)</p></div>
-                <div><p class="p-justify p-description">@Html.DisplayFor(modelItem => item.Description) </p></div>
-                <div><a href="@Html.DisplayFor(modelItem => item.Link)"> @Html.DisplayFor(modelItem => item.Name) Website </a></div>
-            </div>
+        <div class="col-xs-12 col-md-6">
+            <div><h3>@Html.DisplayFor(modelItem => item.Name) </h3></div>
+            <div><p>@Html.DisplayFor(modelItem => item.Address)</p></div>
+            <div><p class="p-justify p-description">@Html.DisplayFor(modelItem => item.Description) </p></div>
+            <div><a href="@Html.DisplayFor(modelItem => item.Link)"> @Html.DisplayFor(modelItem => item.Name) Website </a></div>
+        </div>
     }
+</div>
+<hr />
+<div class="row" id="sitters">
+    <div class="col-xs-12"><h2>Baby Sitters</h2></div>
+    <div class="col-xs-12 p-center"><p class="p-center">Those requiring baby sitters in the Surrey area:</p></div>
+    <div class="col-xs-12">
+        <a href="http://www.sitters.co.uk/baysitters-in-surrey.aspx">www.babysitters.co.uk</a>
+    </div>
 </div>
 <hr />
 <div class="row" id="venuemap">

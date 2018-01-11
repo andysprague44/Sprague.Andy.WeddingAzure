@@ -1,9 +1,10 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #cccccc;
+    background-color: #BDBEC1;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
 }
 
 h1, h2 {
@@ -15,6 +16,10 @@ h3, h4 {
     font-family: 'Amatic SC', cursive;
     font-size: 25px;
     font-weight: bold;
+}
+p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -41,9 +46,9 @@ textarea {
 
 /*Customise navbar*/
 .navbar {
-    background-color: grey;
+    background-color: #FDF4BB;
     border: none;
-    border-bottom: #ffff00;
+    border-bottom: grey;
     font-family: 'Amatic SC', cursive;
 }
 
@@ -60,7 +65,7 @@ textarea {
     font-size: 30px;
 }
 
-/*Center nav-bar text*/
+/*Center navbar*/
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
@@ -68,13 +73,57 @@ textarea {
 }
 .navbar .navbar-collapse {
     text-align: center;
+    width: auto;
+}
+
+/* make the brand clickable and return to home page */
+.navbar-brand {
+    position: relative;
+}
+.clickable {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;     
+  z-index: 1;
+}
+
+
+/* For wide screens, pad right to centralise,
+    accounting for the width of the brand img*/
+@media all and (min-width: 1100px) {
+    .navbar .navbar-collapse {
+        padding-right: 250px;
+    }
+    .navbar-brand > img {
+        width: 250px;
+        height: 50px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1099px) {
+    .navbar .navbar-collapse {
+        padding-right: 50px;
+    }
+
+    .navbar-brand > img {
+        width: 150px;
+        height: 30px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .navbar-brand > img {
+        width: 150px;
+        height: 30px;
+    }
 }
 
 /*Hover navbar text colour*/
 .navbar-fixed-top .navbar-nav > li > a:hover,
-.navbar-fixed-top .navbar-nav > li > a:focus
-{
-    color: #FFFF00;
+.navbar-fixed-top .navbar-nav > li > a:focus {
+    color: #6D6E70;
 }
 
 /* Round images */
@@ -89,9 +138,14 @@ textarea {
     text-align: justify
 }
 
+.p-center {
+    text-align: center
+}
+
+
 /* Line seperators */
 hr {
-    border-top: 1px solid #FFFF00;
+    border-top: 1px solid #FDF6B9;
     width: 30vw;
 }
 
@@ -104,7 +158,7 @@ hr {
     background-repeat: no-repeat;
     color: black;
     height: 65vh;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 /*Jubotron quote settings */
@@ -162,4 +216,11 @@ hr {
 .has-success .help-block,
 .has-success .form-control-feedback {
     color: #3c763d;
+}
+
+/* Gift poem text*/
+#giftpoem > p {
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    font-size: 20px
 }

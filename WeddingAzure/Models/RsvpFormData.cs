@@ -13,7 +13,10 @@ namespace WeddingAzure.Models
         [Display(Name = "Name")]
         [StringLength(100, MinimumLength = 2, ErrorMessage = "* Name must be between 2 and 100 characters.")]
         public string NameTextBoxData { get; set; }
-        
+
+        [Display(Name = "Others in Party")]
+        public string RestOfPartyTextBoxData { get; set; }
+
         [Display(GroupName = "AttendingWedding", Name="Yes, I'll be attending your wedding!", Description = "Saturday 26th May 2:30pm")]
         public bool AttendingWeddingCheckBox { get; set; }
         

@@ -23,6 +23,11 @@
                 @Html.TextBoxFor(m => m.NameTextBoxData, new { @class = "form-control", placeholder = "Your name" })
                 @Html.ValidationMessageFor(m => m.NameTextBoxData, null, new { @class = "text-danger" })
             </div>
+            @Html.LabelFor(m => m.RestOfPartyTextBoxData, new { @class = "col-md-4 control-label" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(m => m.RestOfPartyTextBoxData, new { @class = "form-control", placeholder = "List of other guests, e.g. partner" })
+                @Html.ValidationMessageFor(m => m.RestOfPartyTextBoxData, null, new { @class = "text-danger" })
+            </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(m => m.AttendingWeddingCheckBox, new { @class = "col-md-4 control-label" })

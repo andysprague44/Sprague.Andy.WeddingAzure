@@ -6,47 +6,57 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    
+
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-brand">
-        <img src="https://landowedding.blob.core.windows.net/public-img/wedding-love-bird-icon.png" width="50" height="50" alt="">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+
+        <div class="navbar-header">
+            <div class="navbar-brand">
+                <a href="/"><span class="clickable"></span></a>
+                <img src="https://landowedding.blob.core.windows.net/public-img/wedding-icon.png" width="250" height="50" alt="">
+            </div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="@Url.Action("Index", "Home")">
+                        Our Wedding
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Details", "Home")">
+                        Details
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index", "Rsvp")">
+                        RSVP
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Gifts", "Home")">
+                        Gifts
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-right" width="250"></div>
     </div>
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-    </div>
-    <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-            <li>
-                <a href="@Url.Action("Index", "Home")">
-                    Our Wedding
-                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                </a>
-            </li>
-            <li>
-                <a href="@Url.Action("Details", "Home")">
-                    Details
-                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                </a>
-            </li>
-            <li>
-                <a href="@Url.Action("Index", "Rsvp")">
-                    RSVP
-                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
     <div class="container body-content">
         @RenderBody()
         <hr />

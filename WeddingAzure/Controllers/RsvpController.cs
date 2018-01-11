@@ -36,6 +36,7 @@ namespace WeddingAzure.Controllers
 
                 var rsvpEntity = new RsvpEntity(formData.NameTextBoxData)
                 {
+                    RestOfParty = formData.RestOfPartyTextBoxData,
                     AttendingWedding = formData.AttendingWeddingCheckBox,
                     AttendingPopInThePark = formData.AttendingSundayCheckBox,
                     DietaryRequirements = formData.DietaryRequirementsTextBoxData,
@@ -51,7 +52,7 @@ namespace WeddingAzure.Controllers
 
         public ActionResult Success(Models.RsvpFormData formData)
         {
-            return View(formData);
+           return View(formData);
         }
 
         protected override void OnException(ExceptionContext filterContext)

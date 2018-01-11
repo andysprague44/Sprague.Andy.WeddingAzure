@@ -20,7 +20,7 @@ namespace WeddingAzure.Controllers
         {
             ViewBag.DaysToGo = (DateTime.Parse("2018-05-26") - DateTime.Today).TotalDays;
             ViewBag.JumbotronImage = _imageService.GetImageUri("img", "italy-like-a-bird.jpg");
-            ViewBag.IconImage = _imageService.GetImageUri("img", "wedding-love-bird-icon.png");
+            ViewBag.IconImage = _imageService.GetImageUri("img", "wedding-icon.png");
             var weddingParty = WeddingPartyFactory.GetWeddingPartyMembers(_imageService);
             return View(weddingParty);
         }
@@ -34,8 +34,9 @@ namespace WeddingAzure.Controllers
             return View(accommodations);
         }
 
-
-
-        
+        public ActionResult Gifts()
+        {
+            return View();
+        }      
     }
 }
