@@ -1,13 +1,10 @@
 ﻿using Sprague.Andy.WeddingAzure.DataAccess.Rsvp;
 using Sprague.Andy.WeddingAzure.Models.Rsvp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 using Serilog;
 using Sprague.Andy.WeddingAzure.DataAccess;
+using Sprague.Andy.WeddingAzure.DataAccess.Mail;
 
 namespace WeddingAzure.Controllers
 {
@@ -32,7 +29,8 @@ namespace WeddingAzure.Controllers
 
             if (ModelState.IsValid)
             {
-                var repo = new RsvpRepository(new ServiceConfiguration());
+                var config = new ServiceConfiguration();
+                var repo = new RsvpRepository(config);
 
                 var rsvpEntity = new RsvpEntity(formData.NameTextBoxData)
                 {
@@ -44,6 +42,9 @@ namespace WeddingAzure.Controllers
                 };
 
                 await repo.AddOrReplaceRsvpAsync(rsvpEntity);
+
+                var email = new EmailManager(config);
+                email.SendRsvpRecieved(rsvpEntity);
 
                 return View("Success", formData);
             }
