@@ -22,6 +22,10 @@ p {
     font-size: 16px;
 }
 
+p.thick {
+    font-weight: bold;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -134,6 +138,10 @@ textarea {
     padding: 5%;
 }
 
+.p-banner {
+    font-size: 30px;
+}
+
 .p-justify {
     text-align: justify
 }
@@ -141,7 +149,6 @@ textarea {
 .p-center {
     text-align: center
 }
-
 
 /* Line seperators */
 hr {
@@ -175,11 +182,6 @@ hr {
     #quote { font-size: 4.5vw; }
 }
 
-/* Banner config*/
-#banner {
-    font-size: 30px;
-}
-
 /* Home Page Details */
 #weddingNote, #receptionNote, #popNote {
     font-style: italic;
@@ -187,15 +189,23 @@ hr {
 }
 
 /* Description paragraphs sit in centre of screen*/
+.p-description {
+    margin: 0 5% 5%;
+}
+
+.p-center-md-4 {
+    margin: 0 5% 5% 5%;
+}
+
 @media all and (min-width: 960px) {
-    .p-description {
-        margin: 0 25% 5%;
+    .p-center-md-4 {
+        margin: 0 33% 5% 33%;
     }
 }
 
 @media all and (max-width: 959px) {
-    .p-description {
-        margin: 0 5% 5%;
+    #quote {
+        font-size: 4.5vw;
     }
 }
 

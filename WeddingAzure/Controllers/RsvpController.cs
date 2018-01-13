@@ -34,8 +34,8 @@ namespace WeddingAzure.Controllers
 
                 var rsvpEntity = new RsvpEntity(formData.NameTextBoxData)
                 {
-                    RestOfParty = formData.RestOfPartyTextBoxData,
                     AttendingWedding = formData.AttendingWeddingCheckBox,
+                    WillToastFromAfar = formData.WillToastFromAfar,
                     AttendingPopInThePark = formData.AttendingSundayCheckBox,
                     DietaryRequirements = formData.DietaryRequirementsTextBoxData,
                     SongRequest = formData.SongRequestTextBoxData

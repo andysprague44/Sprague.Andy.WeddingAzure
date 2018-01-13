@@ -33,7 +33,6 @@ namespace Sprague.Andy.WeddingAzure.DataAccess.Mail
             bodyString.AppendLine($"<p>New RSVP recieved from {rsvpEntity.Name}!</p>");
             bodyString.AppendLine("<p></p>");
             bodyString.AppendLine("<ul>");
-            bodyString.AppendLine($"<li>Others in party: {rsvpEntity.RestOfParty}</li>");
             bodyString.AppendLine($"<li>Attending Wedding: {attendingWeddingText}</li>");
             bodyString.AppendLine($"<li>Attending Pop In The Park: {attendingPopInTheParkText}</li>");
             bodyString.AppendLine($"<li>Dietary Requirements: {rsvpEntity.DietaryRequirements ?? "None"}</li>");

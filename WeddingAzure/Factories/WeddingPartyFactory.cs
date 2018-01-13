@@ -20,8 +20,9 @@ namespace WeddingAzure.Factories
                 imageSrc: imageService.GetImageUri("img", "matt.jpg"),
                 name: "Matt Sprague",
                 role: "Best Man",
-                description: @"Matt is Andy's older brother. He enjoys swimming in very cold water,
-                good Indian food, and working out (but only when his wife Chess is watching).",
+                description: @"Matt is Andy's older brother. As a volunteer lifeguard based in Sydney, he enjoys
+                swimming in shark infested waters, saving people from shark infested waters, and wearing his awesome red and yellow patrol cap
+                so he can be seen in shark infested waters.",
                 weddingParty: WeddingParty.Andy);
 
             var jepps = new WeddingPartyMember(
@@ -47,7 +48,7 @@ namespace WeddingAzure.Factories
                 role: "Groomswoman",
                 description: @"Sinéad met Andy in Cambodia and also knows Lizi from university.
                 It is through this connection that Andy and Lizi met. She enjoys theatre,
-                dancing on inanimate objects and having long conversations about feelings (the 'DMC').",
+                dancing on inanimate objects, eating raw chicken, and having long conversations about feelings (the 'DMC').",
                 weddingParty: WeddingParty.Andy);
 
             var ben = new WeddingPartyMember(
@@ -82,7 +83,7 @@ namespace WeddingAzure.Factories
                 imageSrc: imageService.GetImageUri("img", "hails.jpg"),
                 name: "Hayley Richardson",
                 role: "Maid of Honour",
-                description: @"Hayley - aka ‘Hails’ - is a pigeon.
+                description: @"Hayley - aka Hails - is a pigeon.
                 Hails and Lizi lived together for many years and Hails taught Lizi many invaluable life skills
                 including how to poach an egg. She enjoys running, a good gin & tonic and meeting new dogs.",
                 weddingParty: WeddingParty.Lizi);
@@ -92,9 +93,9 @@ namespace WeddingAzure.Factories
                 name: "Laura Jenkinson",
                 role: "Bridesmaid",
                 description: @"Laura - aka Lozzie - is a pigeon.
-                Lozzie and Lizi met at school and they thought they were just like Cheryl Cole and Sarah Harding.
-                Together they sing a great rendition “Hero” by of Enrique Iglesias and share a true love
-                for Game of Thrones. Lozzie enjoys make-up, otters, and pretending she’s not famous. ",
+                Lozzie and Lizi met at school and were the ultimate partners in crime - always getting up to mischief.
+                Together they sing a great rendition of “Hero” by Enrique Iglesias and share a true love
+                for Game of Thrones. Lozzie enjoys teaching yoga, otters, and a meal comprising potato smilies and spaghetti hoops ",
                 weddingParty: WeddingParty.Lizi);
 
             var hayley = new WeddingPartyMember(

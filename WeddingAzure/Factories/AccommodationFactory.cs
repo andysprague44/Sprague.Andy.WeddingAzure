@@ -52,12 +52,22 @@ namespace WeddingAzure.Factories
                 isMainChoice:false
             );
 
+            var airBnb = new Accommodation(
+                name: "AirBnB",
+                address: "Various in the Dorking area",
+                phone: "",
+                description: @"There are various options for AirBnb in the Dorking area, ranging in price from £30 to £330 a night.",
+                link: "https://www.airbnb.com/s/dorking/homes?checkin=2018-05-26",
+                isMainChoice: false
+            );
+
             return new List<Accommodation>
             {
                 travelodge,
                 //burford, dont write burford
                 whiteHorse,
-                lincolnArms
+                lincolnArms,
+                airBnb,
             };
         }
     }

@@ -10,23 +10,23 @@ namespace WeddingAzure.Models
     public class RsvpFormData
     {
         [Required(ErrorMessage = "* Name is required")]
-        [Display(Name = "Name")]
+        [Display(Name = "Name(s)")]
         [StringLength(100, MinimumLength = 2, ErrorMessage = "* Name must be between 2 and 100 characters.")]
         public string NameTextBoxData { get; set; }
 
-        [Display(Name = "Others in Party")]
-        public string RestOfPartyTextBoxData { get; set; }
-
-        [Display(GroupName = "AttendingWedding", Name="Yes, I'll be attending your wedding!", Description = "Saturday 26th May 2:30pm")]
+        [Display(GroupName = "AttendingWedding", Name="Is ready to see you get married")]
         public bool AttendingWeddingCheckBox { get; set; }
         
-        [Display(GroupName = "AttendingSunday", Name = "Yes, I'll be at Pop in the Park!", Description = "Sunday 27th May 2pm-5pm")]
+        [Display(GroupName = "WillToastFromAfar", Name = "Will toast you from afar")]
+        public bool WillToastFromAfar { get; set; }
+
+        [Display(GroupName = "AttendingSunday", Name = "Will attend Pop in the Park")]
         public bool AttendingSundayCheckBox { get; set; }
 
         [Display(Name = "Dietary Requirements")]
         public string DietaryRequirementsTextBoxData { get; set; }
         
-        [Display(Name = "If you play this then I'll dance... ", Prompt = "Title, Artist")]
+        [Display(Name = "I'll only dance if you play... ")]
         public string SongRequestTextBoxData { get; set; }
     }
 }

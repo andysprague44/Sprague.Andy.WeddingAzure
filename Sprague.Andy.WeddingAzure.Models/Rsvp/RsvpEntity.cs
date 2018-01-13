@@ -19,12 +19,10 @@ namespace Sprague.Andy.WeddingAzure.Models.Rsvp
         public RsvpEntity() { }
 
         public string Name { get; set; }
-
-        public string RestOfParty { get; set; }
         public bool AttendingWedding { get; set; }
+        public bool WillToastFromAfar { get; set; }
         public bool AttendingPopInThePark { get; set; }
         public string DietaryRequirements { get; set; }
         public string SongRequest { get; set; }
-
     }
 }
