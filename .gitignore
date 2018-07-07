@@ -1,3 +1,7 @@
+#publish profiles
+**/*.PublishSettings
+**/PublishProfiles/
+
 #Ignore thumbnails created by Windows
 Thumbs.db
 
