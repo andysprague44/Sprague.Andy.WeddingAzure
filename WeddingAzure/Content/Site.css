@@ -26,6 +26,10 @@ p.thick {
     font-weight: bold;
 }
 
+.gallery-download {
+
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -234,3 +238,49 @@ hr {
     font-family: 'Satisfy', cursive;
     font-size: 20px
 }
+
+/*Gallery*/
+
+#weddingGallery {
+    z-index: -1;
+}
+
+#honeymoonGallery {
+    z-index: -1;
+}
+
+.pa-widget-gallery {
+    z-index: -99;
+    width: 90%;
+    height: 30vh;
+    margin: auto;
+}
+
+/*Jumbotron quote fits on 1 line*/
+@media all and (min-width: 960px) {
+    .pa-widget-gallery {
+        width: 100%;
+        height: 30vh;
+    }
+    #honeymoon-gallery {
+        height: 60vh;
+    }
+}
+
+@media all and (max-width: 959px) {
+    .pa-widget-gallery {
+        width: 90%;
+        height: 50vh;
+        margin: auto;
+    }
+    
+}
+
+
+.gallery-download {
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+    margin-top: 10px;
+}
+

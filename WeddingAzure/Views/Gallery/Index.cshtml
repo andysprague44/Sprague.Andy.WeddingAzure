@@ -3,13 +3,73 @@
     ViewBag.Title = "#Lando2018 - Gallery";
 }
 
-<div class="row" id="gallery">
-    <div class="col-xs-12"><h2>Wedding</h2></div>
+<!--https://www.publicalbum.org/blog/embedding-google-photos-albums-->
+<script async src="https://www.publicalbum.org/js/pa-ins.min.js"></script>
 
+
+<div class="row" id="gallery">
+    <div class="col-xs-12"><h2>Photos</h2></div>
+    <div class="row">
+        <p><i>Credit and the warmest of thanks go to our amazing local photographers Phil and Giles</i></p>
+            <div class="col-xs-12 col-md-6">
+                <h3>Wedding Morning</h3>
+                <div class="gallery">
+                    <ins class="pa-widget-gallery"
+                         data-url="https://photos.app.goo.gl/jMkh2eNCAGkv5NjZA"
+                         data-uid="46356c77c9e097d5e46bc4de6a16daab74e1a9c0d0ab0b881683b1bd71e78948"
+                         data-delay="1"
+                         data-repeat="true"></ins>
+                    <p class="gallery-download"><a href="https://photos.app.goo.gl/jMkh2eNCAGkv5NjZA">Like, Comment, Download!</a></p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <h3>Wedding Ceremony</h3>
+                <div class="gallery">
+                    <ins class="pa-widget-gallery"
+                         data-url="https://photos.app.goo.gl/TPfiUKLZHwapzVjY8"
+                         data-uid="787ffa790b9edad5d619327e907cff32ccfcfe7aa75a9473287ff89b989bc78a"
+                         data-delay="1"
+                         data-repeat="true"></ins>
+                    <p class="gallery-download"><a href="https://photos.app.goo.gl/TPfiUKLZHwapzVjY8">Like, Comment, Download!</a></p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <h3>Wedding Reception</h3>
+                <div class="gallery">
+                    <ins class="pa-widget-gallery"
+                         data-url="https://photos.app.goo.gl/X5w6xHhfoHYoghpp8"
+                         data-uid="0ca22a7d636592d68718815f0eafbdeac8f58ad5790a3b665e57a736ed2f3001"
+                         data-delay="1"
+                         data-repeat="true"></ins>
+                    <p class="gallery-download"><a href="https://photos.app.goo.gl/X5w6xHhfoHYoghpp8">Like, Comment, Download!</a></p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <h3>Pop in the Park</h3>
+                <div class="gallery">
+                    <ins class="pa-widget-gallery"
+                         data-url="https://photos.app.goo.gl/GDcNqqd9afXrmX9h6"
+                         data-uid="731b3bc8ed2210c4e82b76f47cf60839215e6d18e0b3be5590e843fc99af673a"
+                         data-delay="1"
+                         data-repeat="true"></ins>
+                    <p class="gallery-download"><a href="https://photos.app.goo.gl/GDcNqqd9afXrmX9h6">Like, Comment, Download!</a></p>
+                </div>
+            </div>
+    </div>
     <div class="row">
         <div class="col-xs-2"></div>
-        <div class="col-xs-8 " id="weddinggallery">
-            <p>Watch this space, the #Lando2018 wedding photos will be landing very soon!</p>
+        <div class="col-xs-8 " id="groupphotogallery">
+            <h3>Group Photos</h3>
+
+            <p class="gallery-download">Official group photos coming very soon!</p>
+
+            <!--<ins class="pa-widget-gallery" style="width:100%;height:480px;"
+                 data-url="https://photos.app.goo.gl/Jcd9vGeetx1cGBg56"
+                 data-uid="b1754c2a5cb9c54efcf8c0d2aeff39025c684896de5ef4866650f10c24d2e537"
+                 data-delay="2"
+                 data-repeat="true"></ins>
+            <p class="p-justify gallery-download"><a href="https://photos.app.goo.gl/Jcd9vGeetx1cGBg56">Like, Comment, or Download!</a></p>
+                -->
         </div>
         <div class="col-xs-2"></div>
     </div>
@@ -17,26 +77,34 @@
 <div class="row">
     <span class="glyphicon glyphicon-heart"></span>
 </div>
-<div>
-    <div class="col-xs-12"><h2>Honeymoon</h2></div>
-    <div class="row">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8 " id="honeymoongallery">
-            <!--https://www.publicalbum.org/blog/embedding-google-photos-albums-->
-            <script async src="https://www.publicalbum.org/js/pa-ins.min.js"></script>
-            <ins class="pa-widget-gallery" style="width:100%;height:480px;"
+<hr />
+<div class="row">
+    <div class="col-xs-12">
+            <h3>Honeymoon</h3>
+            <ins class="pa-widget-gallery" id="honeymoon-gallery"
                  data-url="https://photos.app.goo.gl/Jcd9vGeetx1cGBg56"
                  data-uid="b1754c2a5cb9c54efcf8c0d2aeff39025c684896de5ef4866650f10c24d2e537"
                  data-delay="2"
                  data-repeat="true"></ins>
-        </div>
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8">
-            <p class="p-justify"> To download photos or leave comments, please visit the full album on <a href="https://photos.app.goo.gl/Jcd9vGeetx1cGBg56">Google photos</a></p>
+            <p class="gallery-download"><a href="https://photos.app.goo.gl/Jcd9vGeetx1cGBg56">Like, Comment, or Download!</a></p>
         </div>
     </div>
+<hr />
+
+<div class="row">
+    <span class="glyphicon glyphicon-heart"></span>
 </div>
 <hr />
+<div class="row" id="videos">
+    <div class="col-xs-12"><h2>Films</h2></div>
+    <div class="col-xs-12">
+        <p>Please click the following to view the highlights of the day and a feature film (password: l&a)</p>
+        <p>Credit goes to <a href="www.newlywedfilms.com">Newlywed Films</a></p>
+        <p class="gallery-download"><a href="https://vimeo.com/278235468">Highlights</a></p>
+        <p class="gallery-download"><a href="https://vimeo.com/278236134">Feature</a></p>
+    </div>
+</div>
+
 <div class="row">
     <span class="glyphicon glyphicon-heart"></span>
 </div>
