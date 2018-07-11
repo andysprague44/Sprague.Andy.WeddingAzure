@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<juiceboxgallery 
+
+	useFlickr="true"
+	flickrUserName="landyshared"
+	flickrTags="reception"
+	galleryTitle="Wedding Reception"
+	thumbFrameColor="rgba(255,255,102,.2)"
+	useFullscreenExpand="false"
+	textColor="rgba(255,255,255,0)"
+	showOpenButton="false"/>
