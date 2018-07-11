@@ -22,12 +22,8 @@ p {
     font-size: 16px;
 }
 
-p.thick {
+.thick {
     font-weight: bold;
-}
-
-.gallery-download {
-
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -236,13 +232,16 @@ hr {
 #giftpoem > p {
     text-align: center;
     font-family: 'Satisfy', cursive;
-    font-size: 20px
+    font-size: 20px;
 }
 
+.gallery {
+    margin-bottom: 20px;
+}
 .gallery-download {
     text-align: center;
     font-family: 'Satisfy', cursive;
     font-size: 20px;
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
